@@ -113,4 +113,4 @@
 
  ‚È‚É‚©‚ ‚ê‚Î‚±‚¿‚ç‚©‚ç
  http://ashiato1.blog62.fc2.com/blog-entry-47.html
- Code by tomato111
+ code by tomato111
