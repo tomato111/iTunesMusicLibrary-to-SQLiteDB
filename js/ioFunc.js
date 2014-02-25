@@ -56,12 +56,19 @@ var ioFunc = new function () {
                     i++;
                     rdStr[i] = [];
                 }
-                rdStr[i][RegExp.$1] = RegExp.$2;
+                rdStr[i][RegExp.$1] = decNumRefToString(RegExp.$2);
             }
         }
+
         stream.Close();
         this.debugXML(rdStr);
         return rdStr;
+
+        function decNumRefToString(decNumRef) { // 数値文字参照(10進数)を文字列に変換
+            return decNumRef.replace(/&#(\d+);/ig, function (match, $1, idx, all) {
+                return String.fromCharCode($1);
+            });
+        }
     };
 
     // データベースの作成
